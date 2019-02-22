@@ -1,0 +1,24 @@
+server:
+  port: 8989
+  context-path: /ems
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/baizhi
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ADMINS
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+mybatis:
+  mapper-locations: classpath:com/baizhi/mapper/*Mapper.xml
+  type-aliases-package: com.baizhi.entity
